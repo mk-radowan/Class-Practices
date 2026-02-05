@@ -9,6 +9,36 @@
 </head>
 <body>
     <div class="container">
+
+        <div class="modal" tabindex="-1" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Employee Datasheet</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="div">
+            <label >ID</label> <br>
+            <input type="number" placeholder="Input ID" id=""> <br> <br>
+        </div>
+        <div class="div">
+            <label >Name</label> <br>
+            <input type="text" placeholder="Input Name" id=""> <br> <br>
+        </div>
+        <div class="div">
+            <label >Salary </label> <br>
+            <input type="number" placeholder="Input Salary" id=""> <br> <br>
+        </div>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+     </div>
+    </div>
         <table class="table">
             <tr>
                 <th>ID</th>
@@ -24,13 +54,17 @@
 
                     
                      <button type="button" class="btn btn-success" 
-                    data-bs-toggle="tooltip" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#myModal"
                     data-bs-placement="right"
-                    title="Edit"> 
+                    title="Edit" data-bs-target="#myModal"> 
                     <i class="bi bi-pencil-square"></i>
                 </button> 
                     
-                <button type="button" class="btn btn-danger" 
+                <button 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#myDelet"
+                    type="button" class="btn btn-danger" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right"
                     title="Delet"><i class="bi bi-trash"></i></button> 
@@ -44,13 +78,19 @@
                 <td>Rakib Bhai</td>
                 <td>6000</td>
                 <td>
-                    <button type="button" class="btn btn-success" 
+                    <button 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#myModal"
+                    type="button" class="btn btn-success" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right"
                     title="Edit"> 
                     <i class="bi bi-pencil-square"></i>
                 </button> 
-                <button type="button" class="btn btn-danger" 
+                <button 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#myDelet"
+                    type="button" class="btn btn-danger" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right"
                     title="Delet"><i class="bi bi-trash"></i></button> 
@@ -65,13 +105,19 @@
                 <td>Lyes</td>
                 <td>3000</td>
                 <td>
-                     <button type="button" class="btn btn-success" 
+                     <button 
+                     data-bs-toggle="modal" 
+                    data-bs-target="#myModal"
+                     type="button" class="btn btn-success" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right"
                     title="Edit"> 
                     <i class="bi bi-pencil-square"></i>
                 </button> 
-                <button type="button" class="btn btn-danger" 
+                <button 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#myDelet"
+                    type="button" class="btn btn-danger" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right"
                     title="Delet"><i class="bi bi-trash"></i></button> 
@@ -86,13 +132,19 @@
                 <td>Rafin</td>
                 <td>4500</td>
                 <td>
-                     <button type="button" class="btn btn-success" 
+                     <button 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#myModal"
+                     type="button" class="btn btn-success" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right"
                     title="Edit"> 
                     <i class="bi bi-pencil-square"></i>
                 </button> 
-                <button type="button" class="btn btn-danger" 
+                <button 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#myDelet"
+                    type="button" class="btn btn-danger" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right"
                     title="Delet"><i class="bi bi-trash"></i></button> 
@@ -107,13 +159,19 @@
                 <td>Fahim</td>
                 <td>6000</td>
                 <td>
-                     <button type="button" class="btn btn-success" 
+                     <button 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#myModal"
+                     type="button" class="btn btn-success" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right"
                     title="Edit"> 
                     <i class="bi bi-pencil-square"></i>
                 </button> 
-                <button type="button" class="btn btn-danger" 
+                <button 
+                 data-bs-toggle="modal" 
+                    data-bs-target="#myDelet"
+                type="button" class="btn btn-danger" 
                     data-bs-toggle="tooltip" 
                     data-bs-placement="right"
                     title="Delet"><i class="bi bi-trash"></i></button> 
@@ -127,18 +185,32 @@
 
         
     </div>
+        <div class="delet" >
+            <div class="modal" tabindex="-1" id="myDelet">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Delet</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h6 class="text-danger">Warring !</h6>
+        <p>Are you sure, Parmanent Delet!</p>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-primary">Delet</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
 
     <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
-    <script>
-                const myModal = document.getElementById('myModal')
-            const myInput = document.getElementById('myInput')
-
-            myModal.addEventListener('shown.bs.modal', () => {
-            myInput.focus()})
     </script>
 </body>
 </html>
